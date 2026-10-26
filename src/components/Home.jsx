@@ -193,14 +193,14 @@ const CONTENT = {
     "Merit Scholarships",
   ],
 
-  examSchedule: {
-    title: "Exam Schedule",
-    exams: [
-      { code: "SU-MAT", name: "Management Aptitude Test", examDate: "30th Jan 2027", lastDate: "28th Jan" },
-      { code: "SU-DAT", name: "Design Aptitude Test", examDate: "06th Feb 2027", lastDate: "04th Feb" },
-      { code: "SU-LAT", name: "Law Admission Test", examDate: "13th Feb 2027", lastDate: "11th Feb" },
-    ],
-  },
+  // examSchedule: {
+  //   title: "Exam Schedule",
+  //   exams: [
+  //     { code: "SU-MAT", name: "Management Aptitude Test", examDate: "30th Jan 2027", lastDate: "28th Jan" },
+  //     { code: "SU-DAT", name: "Design Aptitude Test", examDate: "06th Feb 2027", lastDate: "04th Feb" },
+  //     { code: "SU-LAT", name: "Law Admission Test", examDate: "13th Feb 2027", lastDate: "11th Feb" },
+  //   ],
+  // },
 
   stats: [
     { value: "20+", label: "Years of Excellence" },
@@ -258,7 +258,7 @@ const CONTENT = {
 const SCHOOLS = [
   {
     id: "engineering",
-    category: "Engineering & Technology",
+    category: "School of Engineering & Technology",
     name: "School of Engineering & Technology",
     duration: "4 Years | Full-Time",
     groups: [
@@ -293,8 +293,8 @@ const SCHOOLS = [
     ],
   },
   {
-    id: "management",
-    category: "Management",
+    id: "School of Management",
+    category: "School of Management",
     name: "School of Management",
     duration: "2/4 Years | Full-Time",
     groups: [
@@ -323,8 +323,8 @@ const SCHOOLS = [
     ],
   },
   {
-    id: "cse",
-    category: "Computer Science & Engineering",
+    id: "School of Computer Science & Engineering",
+    category: "School of Computer Science & Engineering",
     name: "School of Computer Science & Engineering",
     duration: "2/3/4 Years | Full-Time",
     groups: [
@@ -344,8 +344,8 @@ const SCHOOLS = [
     ],
   },
   {
-    id: "design",
-    category: "Design",
+    id: "School of Design",
+    category: "School of Design",
     name: "School of Design",
     duration: "2/3/4 Years | Full-Time",
     groups: [
@@ -371,8 +371,8 @@ const SCHOOLS = [
     ],
   },
   {
-    id: "law",
-    category: "Law",
+    id: "School Of Law",
+    category: "School Of Law",
     name: "School of Law",
     duration: "3/5 Years | Full-Time",
     groups: [
@@ -384,8 +384,8 @@ const SCHOOLS = [
     ],
   },
   {
-    id: "pharmacy",
-    category: "Pharmaceutical Science",
+    id: "School of Pharmaceutical Science",
+    category: "School of Pharmaceutical Science",
     name: "School of Pharmaceutical Science",
     duration: "2/4 Years | Full-Time",
     groups: [
@@ -395,8 +395,8 @@ const SCHOOLS = [
     ],
   },
   {
-    id: "sciences",
-    category: "Sciences",
+    id: "School of Sciences",
+    category: "School of Sciences",
     name: "School of Sciences",
     duration: "2/3 Years | Full-Time",
     groups: [
@@ -855,84 +855,9 @@ function Hero() {
           </p>
 
           {/* Exam schedule */}
-          <div
-            style={{
-              marginTop: 24,
-              maxWidth: 576,
-              padding: "16px 20px",
-              borderRadius: 12,
-              background: "rgba(255,255,255,.1)",
-              border: "1px solid rgba(255,255,255,.25)",
-              borderLeft: "4px solid rgb(216 10 18)",
-              backdropFilter: "blur(4px)",
-            }}
-          >
-            <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>
-              {CONTENT.examSchedule.title}
-            </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: sm ? "repeat(3, 1fr)" : "1fr",
-                gap: 12,
-              }}
-            >
-              {CONTENT.examSchedule.exams.map((e) => (
-                <div
-                  key={e.code}
-                  style={{
-                    padding: "12px 14px",
-                    borderRadius: 10,
-                    background: "rgba(255,255,255,.12)",
-                    border: "1px solid rgba(255,255,255,.2)",
-                  }}
-                >
-                  <div style={{ fontSize: 14, fontWeight: 800, letterSpacing: "0.08em", color: "#fecaca" }}>
-                    {e.code} Exam
-                  </div>
-                  <div style={{ marginTop: 6, fontSize: 17, fontWeight: 700, lineHeight: 1.2 }}>
-                    {e.examDate}
-                  </div>
-                  <div style={{ marginTop: 8, fontSize: 13, color: C.blue100 }}>
-                    Last Date: <strong style={{ color: C.white }}>{e.lastDate}</strong>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          <ul
-            style={{
-              listStyle: "none",
-              margin: "24px 0 0",
-              padding: 0,
-              display: "grid",
-              gridTemplateColumns: sm ? "1fr 1fr" : "1fr",
-              gap: 8,
-            }}
-          >
-            {CONTENT.heroPoints.map((p) => (
-              <li key={p} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 500 }}>
-                <span
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 20,
-                    height: 20,
-                    borderRadius: "50%",
-                    background: "rgb(216 10 18)",
-                    fontSize: 12,
-                    flexShrink: 0,
-                  }}
-                >
-                  ✓
-                </span>
-                {p}
-              </li>
-            ))}
-          </ul>
+
         </div>
         <div id="enquire" style={{ scrollMarginTop: 96 }}>
           <LeadForm />
